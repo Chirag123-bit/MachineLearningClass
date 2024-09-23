@@ -94,11 +94,11 @@ plt.legend()
 plt.grid(True)
 plt.savefig("MallCustomer_Outputs/silhoutte.png")
 
-# Apply K-Means with the optimal number of clusters (K=4 based on the elbow method)
+# Apply K-Means with the optimal number of clusters (K=6  elbow method)
 kmeans = KMeans(n_clusters=6, random_state=42)
 kmeans_labels = kmeans.fit_predict(data[['Genre', 'Age', 'Annual Income (k$)', 'Spending Score (1-100)']])
 
-# Apply Gaussian Mixture Model (GMM) with the same number of clusters (K=4)
+# Apply Gaussian Mixture Model (GMM) with the same number of clusters (K=6)
 gmm = GaussianMixture(n_components=6, random_state=42)
 gmm_labels = gmm.fit_predict(data[['Genre', 'Age', 'Annual Income (k$)', 'Spending Score (1-100)']])
 
